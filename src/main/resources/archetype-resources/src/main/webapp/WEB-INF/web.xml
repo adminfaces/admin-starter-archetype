@@ -78,7 +78,7 @@
         <location>/403.jsf</location>
     </error-page>
     <error-page>
-        <exception-type>${groupId}.template.exception.AccessDeniedException</exception-type>
+        <exception-type>com.github.adminfaces.template.exception.AccessDeniedException</exception-type>
         <location>/403.jsf</location>
     </error-page>
     <error-page>

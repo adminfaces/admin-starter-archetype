@@ -3,18 +3,17 @@
 #set( $symbol_escape = '\' )
 package ${package}.infra.security;
 
-import ${groupId}.template.session.AdminSession;
+import com.github.adminfaces.template.session.AdminSession;
 import org.omnifaces.util.Faces;
 
 import javax.enterprise.context.SessionScoped;
 import javax.enterprise.inject.Specializes;
-import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import java.io.IOException;
 import java.io.Serializable;
 
 import static ${package}.util.Utils.addDetailMessage;
-import ${groupId}.template.config.AdminConfig;
+import com.github.adminfaces.template.config.AdminConfig;
 import javax.inject.Inject;
 
 /**

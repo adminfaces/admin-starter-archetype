@@ -10,7 +10,7 @@ package ${package}.service;
 import ${package}.infra.model.Filter;
 import ${package}.infra.model.SortOrder;
 import ${package}.model.Car;
-import ${groupId}.template.exception.BusinessException;
+import com.github.adminfaces.template.exception.BusinessException;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import static ${groupId}.template.util.Assert.has;
+import static com.github.adminfaces.template.util.Assert.has;
 
 /**
  * @author rmpestano

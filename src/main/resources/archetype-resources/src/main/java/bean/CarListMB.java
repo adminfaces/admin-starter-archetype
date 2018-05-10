@@ -6,7 +6,7 @@ package ${package}.bean;
 import ${package}.infra.model.Filter;
 import ${package}.model.Car;
 import ${package}.service.CarService;
-import ${groupId}.template.exception.BusinessException;
+import com.github.adminfaces.template.exception.BusinessException;
 import org.omnifaces.cdi.ViewScoped;
 import org.primefaces.model.LazyDataModel;
 import org.primefaces.model.SortOrder;

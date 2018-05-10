@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.io.Serializable;
 
 import static ${package}.util.Utils.addDetailMessage;
-import static ${groupId}.template.util.Assert.has;
+import static com.github.adminfaces.template.util.Assert.has;
 
 /**
  * @author rmpestano
