@@ -1,0 +1,14 @@
+= AdminFaces Starter Archetype
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+Maven archetype for https://github.com/adminfaces/admin-starter[AdminStarter^] application.
+
+== Running 
+
+----
+ mvn archetype:generate -Dfilter=com.github.adminfaces:admin-starter-archetype
+----
