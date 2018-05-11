@@ -4,7 +4,7 @@
 
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-starter-archetype</artifactId>
-    <version>1.0.0-RC15</version>
+    <version>1.0.0-RC15-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
 
     <name>admin-starter-archetype</name>
@@ -20,7 +20,7 @@
         </developer>
     </developers>
 
-   <licenses>
+    <licenses>
         <license>
             <name>The MIT License (MIT)</name>
             <url>https://opensource.org/licenses/MIT</url>
@@ -51,6 +51,46 @@
             </plugins>
         </pluginManagement>
     </build>
+    
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.19.1</version>
+                        <configuration>
+                            <skipTests>true</skipTests>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+    </profiles>
   
     <distributionManagement>
         <snapshotRepository>
