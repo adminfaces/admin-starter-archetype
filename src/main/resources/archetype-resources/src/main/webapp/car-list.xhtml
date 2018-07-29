@@ -8,16 +8,17 @@
                 xmlns:adm="http://github.com/adminfaces"
                 template="${symbol_pound}{layoutMB.template}">
 
-    <ui:param name="title" value="Car listing"/> <!-- Automatic create breadCrumb and page title when param 'title' is provided. --> 
-
-    <ui:define name="head-end">
-        <style type="text/css">
+    <ui:define name="metadata">
+        <ui:param name="title" value="Car listing"/> <!-- Automatic create breadCrumb and page title when param 'title' is provided. --> 
+        
+         <style type="text/css">
             .ui-datatable .ui-datatable-header {
                 text-align: right !important;
             }
 
         </style>
     </ui:define>
+
 
     <ui:define name="description">
         Find cars by name, price and model
@@ -84,7 +85,7 @@
                                              action="${symbol_pound}{carListMB.findCarById(carListMB.id)}"
                                              process="@form"
                                              update="@form"
-                                             styleClass="btn-flat bg-black"
+                                             styleClass="btn-flat bg-black btm-states"
                                              partialSubmit="true"/>
                         </f:facet>
                         <p:column selectionMode="multiple" width="5%" styleClass="align-center"/>
