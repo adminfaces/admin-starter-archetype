@@ -1,6 +1,6 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
+${symbol_pound}set( $symbol_pound = '${symbol_pound}' )
+${symbol_pound}set( $symbol_dollar = '$' )
+${symbol_pound}set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -22,6 +22,45 @@
         <link rel="manifest" href="/manifest.json"/>
         <meta name="theme-color" content="${symbol_pound}444"/>
         <meta name="mobile-web-app-capable" content="yes"/>
+        
+        <style type="text/css">
+            body.login-page {
+                background-color: transparent;
+            }
+
+            html {
+                background: url(${symbol_pound}{resource[ 'images:login-bg.jpg' ]}) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            body .load-bar {
+                margin-top: -20px;
+            }
+
+            @media (max-width: 768px) {
+
+                body div.ui-growl {
+                    display: none;
+                }
+
+                body div.ui-messages-error {
+                    display: block;
+                }
+
+            }
+
+            @media (min-width: 769px) {
+                body div.ui-growl {
+                    display: block;
+                }
+
+                body div.ui-messages-error {
+                    display: none;
+                }
+            }
+        </style>
     </h:head>
 
     <h:body styleClass="hold-transition login-page">
@@ -85,11 +124,6 @@
         <adm:ripple />
         <h:outputScript library="js" name="admintemplate.js" target="head"/>
 
-        <style type="text/css">
-            body .load-bar {
-                margin-top: -20px;
-            }
-        </style>
     </h:body>
 </f:view>
 </html>

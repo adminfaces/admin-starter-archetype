@@ -25,27 +25,27 @@
         Admin Starter
     </ui:define>
 
-     <ui:define name="menu">
-         <ui:include src="/includes/menubar.xhtml"/>
-     </ui:define>
+    <ui:define name="menu">
+        <ui:include src="/includes/menubar.xhtml"/>
+    </ui:define>
 
     <ui:define name="top-menu">
         <ui:include src="/includes/top-bar.xhtml"/>
     </ui:define>
-    
+
     <!-- below is just an example on how to define more tabs for control sidebar --> 
     <ui:define name="controlsidebar-tabs">
         <li><a href="${symbol_pound}control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
         <li><a href="${symbol_pound}control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
     </ui:define>
-     
-   <ui:define name="controlsidebar-content">
+
+    <ui:define name="controlsidebar-content">
         <ui:include src="/includes/controlsidebar-tabs-content.xhtml"/>
     </ui:define>
-    
+
 
     <ui:define name="footer">
-          <a target="_blank"
+        <a target="_blank"
            href="https://github.com/adminfaces/">
             Copyright (C) 2017 - AdminFaces
         </a>
@@ -54,6 +54,8 @@
             <i>${symbol_pound}{msg['starter.version']}</i>
         </div>
 
+        <h:outputScript library="js" name="starter.js" target="head"/>
+        
     </ui:define>
 
 
