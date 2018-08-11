@@ -60,10 +60,24 @@ ${symbol_pound}set( $symbol_escape = '\' )
                     display: none;
                 }
             }
+            
+            body .login-logo {
+                margin: 20px;   
+                text-align: right;
+                font-size: 60px;
+                font-weight: 500
+            }
+
+            @media (max-width: 1024px) {
+                body .login-logo {
+                    text-align: center;
+                }
+            }
         </style>
     </h:head>
 
     <h:body styleClass="hold-transition login-page">
+        <p:growl autoUpdate="true" sticky="true"/>
         <div id="loader" class="load-bar" style="display: none">
             <div class="bar"></div>
             <div class="bar"></div>
