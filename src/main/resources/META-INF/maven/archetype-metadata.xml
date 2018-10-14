@@ -28,6 +28,8 @@
         <include>**/*.css</include>
         <include>**/*.ico</include>
         <include>**/*.png</include>
+        <include>**/*.js</include>
+        <include>**/*.jpg</include>
         <include>**/*.json</include>
       </includes>
     </fileSet>

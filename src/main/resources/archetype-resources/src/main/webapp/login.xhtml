@@ -1,6 +1,6 @@
-${symbol_pound}set( $symbol_pound = '${symbol_pound}' )
-${symbol_pound}set( $symbol_dollar = '$' )
-${symbol_pound}set( $symbol_escape = '\' )
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -68,6 +68,11 @@ ${symbol_pound}set( $symbol_escape = '\' )
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
+        
+        <p:dialog id="adminStatusDialog" modal="true" widgetVar="statusDialog" draggable="false" closable="false"
+                  resizable="false" responsive="true" showHeader="false" appendTo="@(body)">
+            <p:graphicImage library="images" name="${symbol_pound}{adminConfig.loadingImage}"/>
+        </p:dialog>
 
         <div class="login-box">
             <div class="login-logo">
