@@ -86,7 +86,7 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>admin-starter</finalName>
+        <finalName>${artifactId}</finalName>
     </build>
     <profiles>
         <profile>
