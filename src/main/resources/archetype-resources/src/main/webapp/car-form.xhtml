@@ -55,6 +55,8 @@
                         <p:menuitem value="Delete" action="${symbol_pound}{carFormMB.remove}" process="@this"
                                     rendered="${symbol_pound}{not carFormMB.isNew()}" icon="fa fa-trash"
                                  >
+                            <f:setPropertyActionListener value="true"
+                                                         target="${symbol_pound}{facesContext.externalContext.flash.keepMessages}"/>
                             <p:confirm header="Confirmation" message="Are you sure?" icon="ui-icon-danger"/>
                         </p:menuitem>
                         <p:separator/>
