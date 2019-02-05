@@ -23,22 +23,10 @@
         <meta name="mobile-web-app-capable" content="yes"/>
         
         <style type="text/css">
-            body .load-bar {
-                margin-top: -20px;
-            }
-            
-            body.login-page {
-                background-color: transparent;
-            }
-
-            html {
-                background: url(${symbol_pound}{resource[ 'images:login-bg.jpg' ]}) no-repeat center center fixed;
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-            }
-
+           body .load-bar {
+               margin-top: -20px;
+            }  
+            /* below css hides growls in small screens and makes messages visible */
             @media (max-width: 768px) {
 
                 body div.ui-growl {
@@ -50,7 +38,8 @@
                 }
 
             }
-
+            
+           /* below css hides messages in medium/big devices and makes growl visible in such devices */
             @media (min-width: 769px) {
                 body div.ui-growl {
                     display: block;
@@ -60,12 +49,30 @@
                     display: none;
                 }
             }
-            
+
+            body.login-page {
+                background-color: transparent;
+            }
+
+            html {
+                background: url(${symbol_pound}{resource[ 'images:login-bg.jpg' ]}) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+			@media (max-width: 768px) {
+				 html {
+				     background-image: url(${symbol_pound}{resource[ 'images:login-bg-mobile.jpeg' ]});
+				 }
+			}
         </style>
     </h:head>
 
     <h:body styleClass="hold-transition login-page">
-        <p:growl autoUpdate="true" sticky="true"/>
+        <p:growl sticky="true">
+			<p:autoUpdate/>
+		</p:growl>
         <div id="loader" class="load-bar" style="display: none">
             <div class="bar"></div>
             <div class="bar"></div>
