@@ -9,7 +9,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <adminfaces.version>1.0.0-RC21</adminfaces.version>
+        <adminfaces.version>1.0.0</adminfaces.version>
     </properties>
 
     <dependencies>
@@ -48,14 +48,6 @@
             <!--<classifier>dev</classifier> uncompressed theme.css (note that you need to exclude admin-theme brought by admin-template dependency)-->
         </dependency>
     </dependencies>
-    <repositories>
-        <repository>
-            <snapshots />
-            <id>snapshots</id>
-            <name>libs-snapshot</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </repository>
-    </repositories>
     <build>
         <resources>
             <resource>
@@ -92,7 +84,7 @@
         <profile>
             <id>swarm</id>
             <properties>
-                <version.wildfly-swarm>2017.2.0</version.wildfly-swarm>
+                <version.wildfly-swarm>2018.3.3</version.wildfly-swarm>
             </properties>
 
             <dependencies>
@@ -163,15 +155,32 @@
                     <name>JBoss Public Repository Group</name>
                     <url>https://repository.jboss.org/nexus/content/groups/public/</url>
                     <releases>
+                        <enabled>true</enabled>
                         <updatePolicy>never</updatePolicy>
                     </releases>
                     <snapshots>
+                        <enabled>true</enabled>
                         <updatePolicy>daily</updatePolicy>
                     </snapshots>
                 </repository>
             </repositories>
         </profile>
     </profiles>
+
+    <repositories>
+        <repository>
+            <snapshots />
+            <id>snapshots</id>
+            <name>libs-snapshot</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+        <repository>
+            <id>prime-repo</id>
+            <name>PrimeFaces Maven Repository</name>
+            <url>http://repository.primefaces.org</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
 
 
 </project>

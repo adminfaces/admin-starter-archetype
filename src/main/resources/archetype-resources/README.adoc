@@ -19,16 +19,19 @@ image:starter4.png[link="https://raw.githubusercontent.com/adminfaces/admin-star
 
 It should run in any JavaEE 6 or greater application server.
 
-You can also run via wildfly-swarm with command `mvn wildfly-swarm:run -Pswarm`.
+You can also run via http://wildfly-swarm.io/[wildfly-swarm^] with command `mvn wildfly-swarm:run -Pswarm`.
 
 Or using docker:
 
 ----
-docker run -it -p 8080:8080 rmpestano/admin-starter
+docker run -it -p 8080:8080 ${artifactId}/${artifactId}
 ----
 
-The application is available at http://localhost:8080/admin-starter
+TIP: Use the `build-and-run.sh` to easily start the application on a docker container.
+
+
+The application is available at http://localhost:8080/${artifactId}
 
 == Demo
 
-A live demo is available on Openshift here: https://admin-starter-admin-starter.1d35.starter-us-east-1.openshiftapps.com/admin-starter/
+A live demo is available on http://adminfaces.github.io/admin-starter/[Openshift here^]
