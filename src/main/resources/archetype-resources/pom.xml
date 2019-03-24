@@ -47,6 +47,12 @@
             <version>${adminfaces.version}</version>
             <!--<classifier>dev</classifier> uncompressed theme.css (note that you need to exclude admin-theme brought by admin-template dependency)-->
         </dependency>
+        <dependency>
+            <groupId>org.omnifaces</groupId>
+            <artifactId>omnifaces</artifactId>
+            <version>2.1</version>
+        <!--<version>3.2</version> use this version for JavaEE 8 or newer servers-->
+        </dependency>    
     </dependencies>
     <build>
         <resources>
