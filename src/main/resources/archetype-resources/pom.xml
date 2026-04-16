@@ -50,7 +50,7 @@
         <dependency>
             <groupId>org.omnifaces</groupId>
             <artifactId>omnifaces</artifactId>
-            <version>2.1</version>
+            <version>2.7.32</version>
         <!--<version>3.2</version> use this version for JavaEE 8 or newer servers-->
         </dependency>    
     </dependencies>
